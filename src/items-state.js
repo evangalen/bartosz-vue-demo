@@ -1,17 +1,17 @@
 import {reactive} from "@vue/reactivity";
 
 let items = reactive([
-    { id: "1", text: "Item 1 (from JS)", done: false, removed: false },
-    { id: "2", text: "Item 2 (from JS)", done: true, removed: false },
-    { id: "3", text: "Item 3 (from JS)", done: false, removed: false },
-    { id: "4", text: "Item 4 (from JS)", done: true, removed: false }
+    { id: "1", text: "Item 1 (from JS)", done: false },
+    { id: "2", text: "Item 2 (from JS)", done: true },
+    { id: "3", text: "Item 3 (from JS)", done: false },
+    { id: "4", text: "Item 4 (from JS)", done: true }
 ]);
 
 let lastId = "4";
 
 export const TodoItemsState = {
   get items() {
-    return items.filter(item => !item.removed);
+    return items;
   },
 
   addItem(text) {
@@ -25,9 +25,7 @@ export const TodoItemsState = {
   },
 
   removeItem(id) {
-    const item = items.find(item => item.id === id); // find todo item for id
-    item.removed = true;
-    // items.length = 0;
-    // items = items.filter(item => item.id !== id);
+    const index = items.findIndex(item => item.id === id);
+    items.splice(index, 1);
   }
 }
