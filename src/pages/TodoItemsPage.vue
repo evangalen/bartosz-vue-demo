@@ -12,7 +12,7 @@ import TodoItems from '@/components/TodoItems';
 import AddTodoItemForm from "@/components/AddTodoItemForm";
 
 export default {
-  name: 'HomePage',
+  name: 'TodoItemsPage',
   components: {
     AddTodoItemForm,
     TodoItems,

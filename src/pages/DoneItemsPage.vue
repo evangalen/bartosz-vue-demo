@@ -10,7 +10,7 @@
 import TodoItems from '@/components/TodoItems';
 
 export default {
-  name: 'HomePage',
+  name: 'TodoItemsPage',
   components: {
     TodoItems,
   }

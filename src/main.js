@@ -2,11 +2,11 @@ import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import App from './App.vue'
 import './styles.css'
-import HomePage from "@/pages/HomePage";
+import TodoItemsPage from "@/pages/TodoItemsPage";
 import DoneItemsPage from "@/pages/DoneItemsPage";
 
 const routes = [
-    { path: '/', component: HomePage },
+    { path: '/', component: TodoItemsPage },
     { path: '/done', component: DoneItemsPage },
 ]
 
